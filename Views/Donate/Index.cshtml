@@ -1,0 +1,48 @@
+﻿@model IEnumerable<FinalProject.Models.Donate>
+@{
+    ViewBag.Title = "index";
+}
+
+<h2>index</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.DonationKey )
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonationAmount)
+        </th>
+        
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(model => item.DonationKey)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.PersonFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.PersonEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.DonationAmount)
+            </td>
+            
+        </tr>
+    }
+</table>
+
